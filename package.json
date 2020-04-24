@@ -1,0 +1,18 @@
+{
+  "name": "@gauntface/hugo-node",
+  "version": "1.0.0",
+  "description": "Run hugo commands easily from node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauntface/hugo-node-fns.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gauntface/hugo-node-fns/issues"
+  },
+  "homepage": "https://github.com/gauntface/hugo-node-fns#readme"
+}
