@@ -1,5 +1,7 @@
-on: push
 name: Build and Publish
+
+on: push
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest

@@ -1,9 +1,12 @@
+name: Update release branch
+
 on:
+  push:
+    branches: [master]
   schedule:
     # Publish every Sunday
-    # - cron:  '* * * * 0'
-    - cron:  '*/5 * * * *'
-name: Update release branch
+    - cron:  '* * * * 0'
+
 jobs:
   update-release-branch:
     runs-on: ubuntu-18.04
