@@ -14,9 +14,11 @@ async function version() {
   return got[0];
 }
 
-async function build(dir) {
+async function build(dir, flags) {
   return new Promise((resolve, reject) => {
-    const buildCmd = spawn('hugo', [], {
+    const f = []
+    f.push(...flags);
+    const buildCmd = spawn('hugo', f, {
       stdio: 'inherit',
       cwd: dir,
     });
