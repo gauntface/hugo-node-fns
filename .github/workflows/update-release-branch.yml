@@ -1,7 +1,8 @@
 on:
   schedule:
     # Publish every Sunday
-    - cron:  '* * * * 0'
+    # - cron:  '* * * * 0'
+    - cron:  '*/5 * * * *'
 name: Update release branch
 jobs:
   update-release-branch:
@@ -9,12 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: master
+          ref: release
     
-      - name: Copy to release branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          publish_branch: release
-          commit_message: 'Weekly update from master to release: ${{ github.event.head_commit.message }}'
+      - name: Update release branch
+        run: |
+          git fetch origin
+          git reset origin/master --hard
+          git push origin release -f
