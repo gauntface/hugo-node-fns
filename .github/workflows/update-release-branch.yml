@@ -4,6 +4,7 @@
 on:
   schedule:
     - cron: '*/5 * * * *'
+name: Update release branch
 jobs:
   update-release-branch:
     runs-on: ubuntu-18.04
