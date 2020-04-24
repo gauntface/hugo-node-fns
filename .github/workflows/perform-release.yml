@@ -2,8 +2,8 @@ on:
   schedule:
     # Publish every Sunday
     # - cron:  '* * * * 0'
-    # Every 10 minutes
-    - cron: '*/10 * * * *'
+    # Every 1 minutes
+    - cron: '*/1 * * * *'
 jobs:
   deploy:
     runs-on: ubuntu-18.04
