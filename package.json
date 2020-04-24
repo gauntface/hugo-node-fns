@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Run hugo commands easily from node.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "echo 'Build not needed'",
+    "test": "echo 'Tests not written'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gauntface/hugo-node-fns.git"
