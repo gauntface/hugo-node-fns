@@ -1,8 +1,8 @@
+# Publish every Sunday
+# - cron:  '* * * * 0'
+# Every 1 minutes
 on:
   schedule:
-    # Publish every Sunday
-    # - cron:  '* * * * 0'
-    # Every 1 minutes
     - cron: '*/1 * * * *'
 jobs:
   deploy:
