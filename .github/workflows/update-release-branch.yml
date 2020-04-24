@@ -3,7 +3,7 @@
 # Every 1 minutes
 on:
   schedule:
-    - cron: '*/1 * * * *'
+    - cron: '*/5 * * * *'
 jobs:
   update-release-branch:
     runs-on: ubuntu-18.04
