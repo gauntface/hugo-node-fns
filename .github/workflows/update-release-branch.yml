@@ -1,11 +1,9 @@
 name: Update release branch
 
+# Run every Sunday @ 13:30 UTC => 6:30 PST
 on:
-  push:
-    branches: [master]
   schedule:
-    # Publish every Sunday
-    - cron:  '* * * * 0'
+    - cron:  '30 13 * * 0'
 
 jobs:
   update-release-branch:
