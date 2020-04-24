@@ -1,5 +1,8 @@
 {
   "name": "@gauntface/hugo-node",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "1.0.0",
   "description": "Run hugo commands easily from node.",
   "main": "index.js",
