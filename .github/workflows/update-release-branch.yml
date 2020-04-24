@@ -1,9 +1,7 @@
-# Publish every Sunday
-# - cron:  '* * * * 0'
-# Every 1 minutes
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    # Publish every Sunday
+    - cron:  '* * * * 0'
 name: Update release branch
 jobs:
   update-release-branch:
@@ -19,3 +17,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           publish_branch: release
+          commit_message: 'Weekly update from master to release: ${{ github.event.head_commit.message }}'
