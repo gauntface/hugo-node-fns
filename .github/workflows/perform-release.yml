@@ -1,0 +1,19 @@
+on:
+  schedule:
+    # Publish every Sunday
+    # - cron:  '* * * * 0'
+    # Every 10 minutes
+    - cron: '*/10 * * * *'
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        ref: master
+    
+      - name: Copy to release branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: release
