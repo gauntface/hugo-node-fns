@@ -57,14 +57,21 @@ async function stopServer() {
   if (!serverInstance) {
     return;
   }
-  serverInstance.kill();
+
+  await new Promise((resolve) => {
+    serverInstance.addListener('exit', resolve);
+  
+    serverInstance.kill();
+  })
 }
 
 async function restartServer(dir, flags) {
   if (!serverInstance) {
     return;
   }
-  serverInstance.kill();
+  
+  await stopServer();
+
   setTimeout(() => startServer(dir, flags), 500);
 }
 
