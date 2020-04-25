@@ -50,6 +50,7 @@ async function startServer(dir, flags) {
   });
   serverInstance.addListener('exit', (code) => {
     console.error('Hugo server has exited: ', code);
+    serverInstance = null;
   });
 }
 
