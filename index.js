@@ -66,9 +66,7 @@ async function stopServer() {
 }
 
 async function restartServer(dir, flags) {
-  if (serverInstance) {
-    await stopServer();
-  }
+  await stopServer();
 
   setTimeout(() => startServer(dir, flags), 500);
 }
