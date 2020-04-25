@@ -1,5 +1,7 @@
 # hugo-node-fns
 
+[![Build and Test](https://github.com/gauntface/hugo-node-fns/workflows/Build%20and%20Test/badge.svg)](https://github.com/gauntface/hugo-node-fns/actions?query=workflow%3A%22Build+and+Test%22)
+
 Run hugo commands easily from node.
 
 ## API
