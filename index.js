@@ -17,7 +17,9 @@ async function version() {
 async function build(dir, flags) {
   return new Promise((resolve, reject) => {
     const f = []
-    f.push(...flags);
+    if (flags) {
+      f.push(...flags);
+    }
     const buildCmd = spawn('hugo', f, {
       stdio: 'inherit',
       cwd: dir,
@@ -40,7 +42,9 @@ let serverInstance;
 
 async function startServer(dir, flags) {
   const f = ['server']
-  f.push(...flags);
+  if (flags) {
+    f.push(...flags);
+  }
   serverInstance = spawn('hugo', f, {
     stdio: 'inherit',
     cwd: dir,
